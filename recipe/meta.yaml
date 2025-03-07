@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -34,7 +34,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/lab-cosmo/metatensor
+  home: https://github.com/metatensor/metatensor
   summary: Operations to manipulate metatensor data types
   license: BSD-3-Clause
   license_family: BSD
