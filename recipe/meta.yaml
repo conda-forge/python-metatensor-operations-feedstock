@@ -1,13 +1,14 @@
 {% set name = "metatensor-operations" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0.rc2" %}
+{% set upstream_version = "0.5.0rc2" %}
 
 package:
   name: python-{{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/metatensor_operations-{{ version }}.tar.gz
-  sha256: 5eefca88c92479a2b9d1125ee53e31cacca539e220c2ad2c91bff2223c3609d5
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/metatensor_operations-{{ upstream_version }}.tar.gz
+  sha256: 6dda293915a74a32d44b7bfdb4de463a9861fe18e72d2c9a8f4b6767246858ca
 
 build:
   noarch: python
@@ -22,7 +23,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - python-metatensor-core >=0.1.10,<0.2.0
+    - python-metatensor-core >=0.2.0.rc3,<0.3.0
 
 test:
   imports:
